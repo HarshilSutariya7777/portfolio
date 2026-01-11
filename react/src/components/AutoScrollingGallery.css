@@ -1,0 +1,131 @@
+.auto-gallery {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.theme-chip {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1.6px solid var(--color-gray-400);
+    background-color: transparent;
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-chip.active {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-color: var(--color-black);
+}
+
+.gallery-row-wrapper {
+    margin-bottom: 30px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 22px;
+    width: max-content;
+    animation: scrollGallery 60s linear infinite;
+}
+
+.gallery-track.reverse {
+    animation-direction: reverse;
+}
+
+@keyframes scrollGallery {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.33%);
+    }
+
+    /* Move by 1/3 since we have 3 sets */
+}
+
+.gallery-item {
+    flex-shrink: 0;
+    border-radius: 22px;
+    background-color: var(--color-white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dimensions */
+.gallery-item.mobile {
+    width: 380px;
+    height: 900px;
+}
+
+.gallery-item.desktop {
+    width: 650px;
+    height: 550px;
+}
+
+.gallery-item.desktop.wide {
+    width: 850px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .gallery-item.mobile {
+        width: 250px;
+        height: 600px;
+    }
+
+    .gallery-item.desktop {
+        width: 450px;
+        height: 380px;
+    }
+
+    .gallery-item.desktop.wide {
+        width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-item.mobile {
+        width: 160px;
+        height: 400px;
+    }
+
+    .gallery-item.desktop {
+        width: 280px;
+        height: 230px;
+    }
+
+    .gallery-item.desktop.wide {
+        width: 350px;
+    }
+
+    .theme-chip {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

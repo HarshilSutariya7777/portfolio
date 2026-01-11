@@ -1,0 +1,101 @@
+.education-card {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: var(--color-white);
+    border-radius: 15px;
+    border: 1px solid var(--color-gray-300);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-black);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.edu-subtitle {
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-gray-700);
+    line-height: 1.4;
+}
+
+.edu-details {
+    margin-top: 20px;
+}
+
+.edu-divider {
+    width: 50px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.87);
+    border-radius: 2px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.edu-divider.active {
+    background-color: #673ab7;
+    /* Deep Purple */
+}
+
+.edu-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.edu-detail-text {
+    font-family: 'Archivo', sans-serif;
+    font-size: 15px;
+    color: var(--color-gray-800);
+    line-height: 1.5;
+}
+
+.edu-action {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.view-detail-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.view-detail-btn.hovered {
+    background-color: #673ab7;
+    /* Deep Purple */
+    box-shadow: 0 4px 10px rgba(103, 58, 183, 0.3);
+}
+
+@media (max-width: 768px) {
+    .education-card {
+        padding: 20px;
+    }
+
+    .edu-title {
+        font-size: 18px;
+    }
+
+    .edu-subtitle {
+        font-size: 14px;
+    }
+}

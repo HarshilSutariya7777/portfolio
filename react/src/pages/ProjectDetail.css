@@ -1,0 +1,224 @@
+.project-detail-page {
+    background-color: var(--color-white);
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.project-hero {
+    height: 520px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.project-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 60px;
+}
+
+.project-hero-content {
+    color: var(--color-white);
+    text-align: left;
+    width: 100%;
+    padding-left: 60px;
+}
+
+.project-category {
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+}
+
+.project-hero-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--color-white);
+}
+
+/* About Section */
+.project-about-section {
+    padding: 60px 0;
+    background-color: var(--color-white);
+}
+
+.about-layout {
+    display: flex;
+    gap: 60px;
+}
+
+.about-content {
+    flex: 2;
+}
+
+.about-sidebar {
+    flex: 1;
+}
+
+.section-heading {
+    font-family: 'Archivo', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-black);
+    margin-bottom: 20px;
+}
+
+.project-full-desc {
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 50px;
+}
+
+.desktop-process-wrapper {
+    margin-top: 50px;
+}
+
+/* Client Details Box */
+.client-details-box {
+    padding: 30px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.detail-item {
+    margin-bottom: 20px;
+}
+
+.detail-label {
+    display: block;
+    font-family: 'Archivo', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color-gray-600);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.detail-value {
+    display: block;
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-black);
+    white-space: pre-line;
+}
+
+.play-store-link {
+    display: inline-block;
+    margin-top: 10px;
+    transition: opacity 0.3s;
+}
+
+.play-store-link:hover {
+    opacity: 0.8;
+}
+
+/* Section Divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+    margin: 40px 60px;
+}
+
+/* Tech Section */
+.project-tech-section {
+    padding: 60px 0;
+}
+
+/* Gallery Section */
+.project-gallery-section {
+    padding: 60px 0;
+}
+
+.gallery-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    color: var(--color-gray-600);
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .project-hero {
+        height: 400px;
+    }
+
+    .project-hero-title {
+        font-size: 50px;
+    }
+
+    .about-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-sidebar {
+        order: -1;
+        /* Move sidebar to top on tablet/mobile if desired, or keep bottom */
+        order: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-hero {
+        height: 400px;
+    }
+
+    .project-hero-overlay {
+        padding-bottom: 20px;
+    }
+
+    .project-category {
+        font-size: 14px;
+    }
+
+    .project-hero-title {
+        font-size: 40px;
+    }
+
+    .project-about-section,
+    .project-tech-section,
+    .project-gallery-section {
+        padding: 40px 0;
+    }
+
+    .project-full-desc {
+        font-size: 16px;
+    }
+
+    .gallery-title {
+        font-size: 40px;
+    }
+
+    .section-divider {
+        margin: 40px 20px;
+    }
+}
